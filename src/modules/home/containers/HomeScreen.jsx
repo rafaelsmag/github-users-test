@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import DebounceInput from 'react-debounce-input'
-import { Grid, Input, Loader } from 'semantic-ui-react'
-import { Div } from 'glamorous'
+import { Grid, Input } from 'semantic-ui-react'
 import { connect } from 'react-redux'
-import SmallAvatarRow from '../../shared/components/rows/SmallAvatarRow'
 import { getSearchResults, getIsLoading } from '../../../redux/reducers/search/selectors'
 import { searchUsersAction } from '../../../redux/actions/searchAsyncActions'
+import SearchResults from '../components/SearchResults'
 
 class HomeScreen extends Component {
   state = {
@@ -23,29 +22,19 @@ class HomeScreen extends Component {
     this.props.fetchUsers(searchText)
   }
 
-  renderUser = (user) => {
-    return (
-      <SmallAvatarRow key={user.id} image={user.image} title={user.name}/>
-    )
-  }
-
-  renderResults = () => {
-    return this.props.users.map(this.renderUser)
-  }
-
   render () {
     return (
       <Grid columns={1} centered verticalAlign="middle" stretched>
-        <Grid.Column mobile={10} tablet={8} computer={8} textAlign='center' stretched verticalAlign='middle'>
+        <Grid.Column mobile={14} tablet={8} computer={8} textAlign='center' stretched verticalAlign='middle'>
           <DebounceInput
+            placeholder='Busque pelo nome do usuário'
             value={this.state.searchText}
             debounceTimeout={300}
             onChange={this.handleOnChangeSearch}
+            loading={this.props.isLoading}
+            icon='search'
             element={Input} />
-          <Div>
-            <Loader active={this.props.isLoading} />
-            {this.renderResults()}
-          </Div>
+          <SearchResults results={this.props.users} isLoading={this.props.isLoading}/>
         </Grid.Column>
       </Grid>
     )

@@ -9,9 +9,12 @@ function mapUser (item) {
 }
 
 export function searchUsers (searchTerm) {
-  return fetch(GITHUB_SEARCH_USERS(searchTerm))
-    .then(res => res.json())
-    .then(result => {
-      return result.items.map(mapUser)
-    })
+  if (searchTerm.length > 0) {
+    return fetch(GITHUB_SEARCH_USERS(searchTerm))
+      .then(res => res.json())
+      .then(result => {
+        return result.items.map(mapUser)
+      })
+  }
+  return []
 }
