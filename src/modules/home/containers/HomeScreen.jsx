@@ -27,7 +27,7 @@ class HomeScreen extends Component {
   render () {
     return (
       <Grid columns={1} centered verticalAlign="middle" stretched>
-        <Grid.Column mobile={14} tablet={8} computer={8} textAlign='center' stretched verticalAlign='middle'>
+        <Grid.Column mobile={14} tablet={10} computer={10} textAlign='center' stretched verticalAlign='middle'>
           <Div css={styles.textTitle}>
             <Span>Encontre seus colegas no GitHub</Span>
           </Div>
@@ -56,7 +56,12 @@ const styles = {
     height: '40vh',
     display: 'flex',
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+    '@media(min-width: 768px)': {
+      alignItems: 'flex-end',
+      height: '30vh',
+      marginBottom: Metrics.xxlSpacing
+    }
   }
 }
 
