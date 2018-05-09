@@ -49,7 +49,7 @@ const styles = {
   textTitle: {
     ...Fonts.size.heavyNormal,
     fontSize: Fonts.size.h1,
-    lineHeight: Fonts.lineHeight.boost,
+    lineHeight: '1.1',
     color: Colors.white,
     textAlign: 'left',
     marginTop: Metrics.xxlSpacing,
@@ -61,6 +61,13 @@ const styles = {
       alignItems: 'flex-end',
       height: '30vh',
       marginBottom: Metrics.xxlSpacing
+    },
+    '@media(max-height: 450px)': {
+      alignItems: 'flex-end',
+      height: '20vh',
+      fontSize: Fonts.size.h4,
+      marginBottom: Metrics.smallSpacing,
+      marginTop: Metrics.standardSpacing
     }
   }
 }
