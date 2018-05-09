@@ -1,7 +1,7 @@
 import { Colors } from '../../../config/constants/'
 const styles = {
   app: {
-    backgroundColor: Colors.screen,
+    backgroundColor: Colors.darkBackground,
     width: '100%'
   }
 }

@@ -11,7 +11,7 @@ const type = {
 }
 
 const size = {
-  h1: '2.5em',
+  h1: '2.6em',
   h2: '2em',
   h3: '1.9em',
   h4: '1.8em',
@@ -28,9 +28,9 @@ const size = {
 }
 
 const lineHeight = {
-  boost: '24px',
-  regular: '20px',
-  small: '16px'
+  boost: '1.4em',
+  regular: '1em',
+  small: '0.5em'
 }
 
 const style = {

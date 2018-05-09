@@ -13,7 +13,7 @@ export function searchUsers (searchTerm) {
     return fetch(GITHUB_SEARCH_USERS(searchTerm))
       .then(res => res.json())
       .then(result => {
-        return result.items.map(mapUser)
+        return result.items.length > 0 ? result.items.map(mapUser) : []
       })
   }
   return []

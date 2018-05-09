@@ -1,6 +1,6 @@
 export const Colors = {
-  primary: '#15c850',
-  special: '#1D87FF',
+  primary: '#3F49B5',
+  special: '#33C4AF',
   primaryGradient: {
     light: '#31E588',
     dark: '#16C750'
@@ -14,9 +14,9 @@ export const Colors = {
   white: '#ffffff',
   whiteOpaque: 'rgba(255, 255, 255, 0.5)',
   error: '#FF3B30',
-  androidStatusBar: 'rgba(0, 0, 0, 0.2)',
   screen: '#f3f5f7',
   lightBackground: '#f7f9fb',
+  darkBackground: '#3F49B5',
 
   darkOverlay: 'rgba(0, 0, 0, 0.80)',
   darkDivider: 'rgba(0, 0, 0, 0.14)',
@@ -33,6 +33,7 @@ export const Colors = {
   blackDisabledAlt: '#00000060',
   blackDisabledAlt2: '#00000042',
 
+  whiteLight: '#ffffffDD',
   whiteSecondary: '#ffffffB2',
   whiteDisabled: '#ffffff7F',
   whiteDisabled2: '#ffffff4C'

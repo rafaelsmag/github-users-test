@@ -24,9 +24,10 @@ const SearchResults = ({ results, isLoading }) => (
 const styles = {
   resultList: {
     overflow: 'auto',
+    height: '40vh',
     border: `${Metrics.borderWidth} solid ${Colors.darkDivider}`,
     borderRadius: `0 0 ${Metrics.borderRadius} ${Metrics.borderRadius}`,
-    backgroundColor: `${Colors.lightBackground}`
+    backgroundColor: `${Colors.whiteLight}`
   }
 }
 

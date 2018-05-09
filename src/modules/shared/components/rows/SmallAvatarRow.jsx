@@ -37,7 +37,7 @@ const styles = {
     padding: `${Metrics.smallSpacing} ${Metrics.xsSpacing} ${Metrics.smallSpacing} ${Metrics.xsSpacing}`
   },
   avatarImage: {
-    width: Metrics.standartImage,
+    width: Metrics.standardImage,
     marginRight: Metrics.tinySpacing
   },
   title: {
